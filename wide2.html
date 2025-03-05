@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIDE OPPORTUNITIES</title>
+    <link rel="stylesheet" href="wide2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>WIDE OPPORTUNITIES</h1>
+        <div class="pirveli"> 
+            <div class="erti"></div>
+            <div class="text">
+                <h2><span>Description:</span>Our headphones are engineered with high-fidelity audio components that 
+                    deliver a rich and immersive sound experience.</h2><br>
+                    <br>
+                    <h2>Price: 155.00$</h2><br>
+                    <a href="purchase.html" target="_blank">
+                        <button>Buy Now</button>
+                    </a>
+                </button>
+                </div>
+        </div>
+        <div class="meore"> 
+            <div class="text1">
+                <h2><span>Description:</span>Our headphones are engineered with high-fidelity audio components that 
+                    deliver a rich and immersive sound experience.</h2><br>
+                    <br>
+                    <h2>Price: 155.00$</h2><br>
+                    <a href="purchase.html" target="_blank">
+                        <button>Buy Now</button>
+                    </a>
+                </div>
+                <div class="ori"></div>
+        </div>
+        
+        <div class="mesame"> 
+            <div class="sami"></div>
+            <div class="text2">
+                <h2><span>Description:</span>Our headphones are engineered with high-fidelity audio components that 
+                    deliver a rich and immersive sound experience.</h2><br>
+                    <br>
+                    <h2>Price: 155.00$</h2><br>
+                    <a href="purchase.html" target="_blank">
+                        <button>Buy Now</button>
+                    </a>
+                </div>
+        </div>
+
+
+
+        <div class="horizontal-wrap">
+            <button id="backBtn">‹</button>
+            <div class="horizontal">
+                <div class="horizontal1">
+                    <div class="imagine1">
+                        
+                        <img src="images/poto6.jpg" alt="Headphones">
+                        <img src="images/poto7.jpg" alt="Headphones">
+                        <img src="images/poto8.jpg" alt="Headphones">
+                    </div>
+                    
+                </div>
+                <div class="horizontal1">
+                    <div class="imagine1">
+                        <img src="images/poto2.jpg" alt="Headphones">
+                        <img src="images/poto4.jpg" alt="Headphones">
+                        <img src="images/poto3.jpg" alt="Headphones">
+                    </div>
+                    
+                </div>
+                <div class="horizontal1">
+                    <div class="imagine1">
+                        <img src="images/poto23.jpg" alt="Headphones">
+                        <img src="images/poto24.jpg" alt="Headphones">
+                        <img src="images/poto25.jpg" alt="Headphones">
+                    </div>
+                    
+                </div>
+            </div>
+            <button id="nextBtn">›</button>
+            <div class="navigation"></div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        
+const slider = document.querySelector('.horizontal');
+const slides = document.querySelectorAll('.horizontal1');
+const nextBtn = document.getElementById('nextBtn');
+const backBtn = document.getElementById('backBtn');
+const navigation = document.querySelector('.navigation');
+
+let currentSlide = 0;
+
+slides.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (index === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+        currentSlide = index;
+        updateSlider();
+    });
+    navigation.appendChild(dot);
+});
+
+function updateSlider() {
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    document.querySelectorAll('.dot').forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+    });
+
+    backBtn.style.opacity = currentSlide === 0 ? '0.5' : '1';
+    nextBtn.style.opacity = currentSlide === slides.length - 1 ? '0.5' : '1';
+}
+
+nextBtn.addEventListener('click', () => {
+    if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        updateSlider();
+    }
+});
+
+backBtn.addEventListener('click', () => {
+    if (currentSlide > 0) {
+        currentSlide--;
+        updateSlider();
+    }
+});
+
+updateSlider();
+
+
+
+    </script>
+</body>
+</html>

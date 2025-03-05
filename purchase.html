@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PURCHASE PAGE</title>
+    <link rel="stylesheet" href="purchase.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <div class="pirveli">
+            <div class="erti"></div>
+            <div class="text">
+                <h2><span>Description:</span>Our headphones are engineered with high-fidelity audio components that 
+                    deliver a rich and immersive sound experience.</h2><br>
+                    <br>
+                    <h2>Price: 155.00$</h2><br>
+                </div>
+        </div>
+<form action="" id="form">
+        <div class="meore">
+            <div class="box"><input type="text" id="erti" placeholder="NAME"></div>
+            <div class="box" ><input type="email" id="ori" placeholder="Email" ></div>
+            <div class="box"><input type="number" id="sami" placeholder="ID"></div>
+            <div class="box" ><input type="number" id="otxi" placeholder="CARD NUMBER"></div>
+            <div class="row">
+                <div class="box1" ><input type="number" id="xuti" placeholder="CVC"></div>
+                <div class="box1" ><input type="number" id="eqvsi" placeholder="CODE"></div>
+            </div>
+            <button id="signUp">PURCHASE</button>
+    </div>
+</form>
+    </div>
+<script>
+const form = document.querySelector("form");
+const erti = document.getElementById("erti");
+const ori = document.getElementById("ori"); // შესწორებულია ცვლადის სახელი "oru" -> "ori"
+const sami = document.getElementById("sami");
+const otxi = document.getElementById("otxi");
+const xuti = document.getElementById("xuti");
+const eqvsi = document.getElementById("eqvsi");
+const signUpButton = document.getElementById("signUp");
+
+// შევქმნათ error_message ელემენტი და მოვათავსოთ button-ის შემდეგ
+let error_message = document.getElementById("error-message");
+if (!error_message) {
+    error_message = document.createElement("div");
+    error_message.id = "error-message";
+    error_message.style.color = "red";
+    error_message.style.marginTop = "15px";
+    error_message.style.textAlign = "center";
+    // მოვათავსოთ ღილაკის შემდეგ
+    signUpButton.parentNode.insertBefore(error_message, signUpButton.nextSibling);
+}
+
+// ღილაკზე დაჭერისას
+signUpButton.addEventListener("click", (e) => {
+    e.preventDefault(); // გაუქმებს ფორმის ავტომატურ გაგზავნას
+    
+    // შეამოწმებს ველებს და დაამატებს შეცდომებს
+    let errors = getSignupFormErrors(
+        erti.value,
+        ori.value,
+        sami.value,
+        otxi.value,
+        xuti.value,
+        eqvsi.value
+    );
+    
+    if (errors.length > 0) {
+        error_message.innerHTML = errors.join(". ");
+    } else {
+        error_message.innerText = "";
+        form.submit(); // თუ შეცდომები არ არის, გაგზავნის ფორმას
+    }
+});
+
+function getSignupFormErrors(ertiValue, oriValue, samiValue, otxiValue, xutiValue, eqvsiValue) {
+    let errors = [];
+    
+    // შევამოწმოთ ყველა ველი და დავამატოთ შეცდომები
+    
+    // სახელი
+    if (ertiValue === "" || ertiValue == null) {
+        errors.push("Firstname is required");
+        erti.parentElement.classList.add("incorrect");
+    } else if (ertiValue.length > 8) {
+        errors.push("Your firstname must be 8 characters long");
+        erti.parentElement.classList.add("incorrect");
+    } else {
+        erti.parentElement.classList.remove("incorrect");
+    }
+    
+    // ელ-ფოსტა
+    if (oriValue === "" || oriValue == null) {
+        errors.push("Email is required");
+        ori.parentElement.classList.add("incorrect");
+    } else if (oriValue.length !== 12) {
+        errors.push("Your email must be 12 characters long");
+        ori.parentElement.classList.add("incorrect");
+    } else {
+        ori.parentElement.classList.remove("incorrect");
+    }
+    
+    // ID
+    if (samiValue === "" || samiValue == null) {
+        errors.push("ID is required");
+        sami.parentElement.classList.add("incorrect");
+    } else if (samiValue.length < 12) {
+        errors.push("Your ID must be 12 characters long");
+        sami.parentElement.classList.add("incorrect");
+    } else {
+        sami.parentElement.classList.remove("incorrect");
+    }
+    
+    // ბარათის ნომერი
+    if (otxiValue === "" || otxiValue == null) {
+        errors.push("Card number is required");
+        otxi.parentElement.classList.add("incorrect");
+    } else if (otxiValue.length !== 11) {
+        errors.push("Your card number must be 11 characters long");
+        otxi.parentElement.classList.add("incorrect");
+    } else {
+        otxi.parentElement.classList.remove("incorrect");
+    }
+    
+    // CVC
+    if (xutiValue === "" || xutiValue == null) {
+        errors.push("CVC is required");
+        xuti.parentElement.classList.add("incorrect");
+    } else if (xutiValue.length !== 3) {
+        errors.push("Your CVC must be 3 characters long");
+        xuti.parentElement.classList.add("incorrect");
+    } else {
+        xuti.parentElement.classList.remove("incorrect");
+    }
+    
+    // კოდი
+    if (eqvsiValue === "" || eqvsiValue == null) {
+        errors.push("Code is required");  // შეცვლილია შეცდომის ტექსტი
+        eqvsi.parentElement.classList.add("incorrect");
+    } else if (eqvsiValue.length !== 4) {
+        errors.push("Your code must be 4 characters long");  // შეცვლილია შეცდომის ტექსტი
+        eqvsi.parentElement.classList.add("incorrect");
+    } else {
+        eqvsi.parentElement.classList.remove("incorrect");
+    }
+    
+    return errors;
+}
+</script>
+</body>
+</html>

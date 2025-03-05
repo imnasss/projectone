@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.container {
+    width: 100%;
+    height: 2900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*vertical  */
+.vertical {
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.texts {
+    font-family: 'DM Serif Text';
+    font-size: 20px;
+    opacity: 0.8;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    line-height: 50px;
+    height: 100vh;
+    text-align: center;
+}
+.texts h3:hover{
+    text-decoration: underline;
+}
+#h1 {
+    color: white;
+    opacity: 1;
+}
+
+/*pirveli page */
+.pirveli {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width:80.3%;
+    height: 900px;
+    background-color: rgb(79, 72, 72);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 2px solid black;
+}
+
+.erti {
+    position: absolute;
+    top: 200px;
+    left: 90px;
+    height: 300px;
+    width: 600px;
+    border: 2px solid black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    line-height: 70px;
+    background-image: url('images/poto11.jpg'); /* Set image as background */
+    background-size: cover; /* Ensure it covers the entire div */
+    background-position: center; /* Center the image */
+    color: white; /* Text color for contrast */
+}
+
+
+.erti button{
+    padding: 12px 30px;
+    font-size: 1rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.ori{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 200px;
+    left: 700px;
+    background: transparent;
+    height: 300px;
+    width: 350px;
+    border: 2px solid black;
+    line-height: 70px;
+    background-image: url('images/poto13.jpg'); /* Set image as background */
+    background-size: cover; /* Ensure it covers the entire div */
+    background-position: center; /* Center the image */
+    color: black; /* Text color for contrast */
+}
+.ori button{
+    padding: 12px 30px;
+    font-size: 1rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.sami{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 520px;
+    left: 90px;
+    background: transparent;
+    height: 300px;
+    width: 350px;
+    border: 2px solid black;
+    line-height: 70px;
+    background-image: url('images/poto14.jpg'); /* Set image as background */
+    background-size: cover; /* Ensure it covers the entire div */
+    background-position: center; /* Center the image */
+    color: black; /* Text color for contrast */
+}
+.sami button{
+        padding: 12px 30px;
+        font-size: 1rem;
+        background: #333;
+        color: white;
+        border: none;
+        border-radius: 25px;
+}
+.otxi{
+    position: absolute;
+    top: 520px;
+    left: 450px;
+    background: transparent;
+    height: 300px;
+    width: 600px;
+    border: 2px solid black;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    line-height: 70px;
+    background-image: url('images/poto15.jpg'); /* Set image as background */
+    background-size: cover; /* Ensure it covers the entire div */
+    background-position: center; /* Center the image */
+    color: white; /* Text color for contrast */
+}
+.otxi button{
+    padding: 12px 30px;
+    font-size: 1rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+}
+
+/*meore page */
+.meore{
+    position: absolute;
+    top: 900px;
+    right: 0px;
+    width: 80.3%;
+    height: 1300px;
+    background-color: grey;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    border: 2px solid black;
+}
+.texts1{
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    padding-top: 30px; /* დამატებითი აწევა */
+    margin-top: 20px; /* დამატებითი ზევით დაშორება */
+    color: rgb(227, 216, 216);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.samive {
+    width: 1000px;
+    background: transparent;
+    display: flex;
+    flex-direction: column; /* ამატებს ვერტიკალურ განლაგებას */
+    gap: 50px;
+}
+.samive h2{
+    color: black;
+}
+.samive h4{
+    color: black;
+    opacity: 0.4;
+}
+.erti1 {
+    color: red;
+    width: 1000px;
+    min-height: 320px;
+    background-color: white;
+    display: flex; /* Flexbox-ის ჩართვა */
+    align-items: stretch; /* ორივე ელემენტი ერთნაირად დაიჭერს სიმაღლეს */
+    gap: 20px; /* დაშორება box-სა და ტექსტს შორის */
+    padding: 20px;
+    text-align: left;
+}
+
+.erti1 .box1 {
+    background-image: url('images/poto16.jpg'); /* Set image as background */
+    background-size: cover; /* Ensure it covers the entire div */
+    background-position: center; /* Center the image */
+    flex: 1; /* Box დაიკავებს მაქსიმალურად ხელმისაწვდომ სივრცეს */
+    
+}
+
+
+.erti1 .text1 {
+    margin-top: 30px;
+    flex: 1; /* ტექსტის ნაწილს მეტ სივრცეს მისცემს, ვიდრე box-ს */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* ვერტიკალური გასწორება */
+}
+.erti1 button{
+    margin: auto;
+    align-items: center;
+    width: 50%;
+    padding: 12px 30px;
+    font-size: 1rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.ori2 {
+    text-align: left;
+    color: red;
+    width: 1000px;
+    min-height: 320px;
+    background-color: white;
+    display: flex; /* Flexbox-ის ჩართვა */
+    align-items: stretch; /* ორივე ელემენტი ერთნაირად დაიჭერს სიმაღლეს */
+    gap: 20px; /* დაშორება box-სა და ტექსტს შორის */
+    padding: 20px;
+}
+
+.ori2 .box2 {
+    
+    background-image: url('images/poto17.jpg'); /* Set image as background */
+    background-size: cover; /* Ensure it covers the entire div */
+    background-position: center; /* Center the image */
+    flex: 1; /* Box დაიკავებს მაქსიმალურად ხელმისაწვდომ სივრცეს */
+       
+   
+}
+
+.ori2 .text2 {
+    margin-top: 30px;
+    flex: 1; /* ტექსტის ნაწილს მეტ სივრცეს მისცემს, ვიდრე box-ს */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* ვერტიკალური გასწორება */
+}
+
+.ori2 button{
+    margin: auto;
+    align-items: center;
+    width: 50%;
+    padding: 12px 30px;
+    font-size: 1rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+
+
+
+.sami3 {
+    text-align: left;
+    color: red;
+    width: 1000px;
+    min-height: 320px;
+    background-color: white;
+    display: flex; /* Flexbox-ის ჩართვა */
+    align-items: stretch; /* ორივე ელემენტი ერთნაირად დაიჭერს სიმაღლეს */
+    gap: 20px; /* დაშორება box-სა და ტექსტს შორის */
+    padding: 20px;
+}
+
+.sami3 .box3 {
+    background-image: url('images/poto12.jpg'); /* Set image as background */
+    background-size: cover; /* Ensure it covers the entire div */
+    background-position: center; /* Center the image */
+    flex: 1; /* Box დაიკავებს მაქსიმალურად ხელმისაწვდომ სივრცეს */
+}
+
+.sami3 .text3 {
+    margin-top: 30px;
+    flex: 1; /* ტექსტის ნაწილს მეტ სივრცეს მისცემს, ვიდრე box-ს */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* ვერტიკალური გასწორება */
+}
+
+.sami3 button{
+    margin: auto;
+    align-items: center;
+    width: 50%;
+    padding: 12px 30px;
+    font-size: 1rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+
+
+/* mesame page*/
+.mesame {
+    position: absolute;
+    right: 0;
+    top: 2200px;
+   background-color: rgba(176, 163, 163, 0.563);
+    width: 80.3%;
+    height: 800px;
+    display: flex;
+    align-items: flex-start; /* ზედა ნაწილში მოთავსება */
+    text-align: center;    
+    justify-content: center;
+    font-family: 'Gabriela';
+    padding: 30px;
+}
+.head{
+    margin-top: 50px;
+}
+
+.containers{
+    height: 600px;
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2px;
+    padding: 20px;
+}
+.pirveli1{
+    height:400px;
+    width: 300px;
+    border: 2px solid grey;
+    align-items: center;
+    justify-content: center;
+
+}
+.pirveli1 img{
+    height: 100px;
+    width: 100px;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+.pirveli1 h4{
+    opacity: 0.4;
+}
+.pirveli1 button{
+    padding: 12px 30px;
+    font-size: 1rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.meore2{
+    height:500px;
+    width: 300px;
+    border: 2px solid grey;
+}
+.meore2 img{
+    height: 150px;
+    width: 150px;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+.meore2 h4{
+    opacity: 0.4;
+}
+.meore2 button{
+    padding: 12px 30px;
+    font-size: 1rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.meore2 h5{
+    margin: auto;
+    justify-content: center;
+    width: 100px;
+    background-color: grey;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+.mesame3{
+    height:400px;
+    width: 300px;
+    border: 2px solid grey;
+}
+
+.mesame3 img{
+    height: 100px;
+    width: 100px;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+.mesame3 h4{
+    opacity: 0.4;
+}
+.mesame3 button{
+        padding: 12px 30px;
+        font-size: 1rem;
+        background: #333;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+}

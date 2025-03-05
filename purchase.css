@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gabriela', 'Kumar one', 'DM Serif Text';
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    
+    background: linear-gradient(#c5b9a5, #7694a7);
+
+/* pirveli background: linear-gradient(#f7f8f8,#085d92);
+    */    
+}
+/* pirveli */
+.pirveli{
+    position: fixed;
+    top:80px;
+    height: 90%;
+    width: 600px;
+    background: transparent;
+    margin-left: 100px;
+}
+.erti{
+    border: 5px solid white;
+    height: 300px;
+    width: 300px;
+    margin-top: 50px;
+    margin-left: 150px;
+    display: flex;
+    margin-top: 50px;
+    margin-left: 120px;
+    background-image: url('images/poto2.jpg');
+    background-size: cover;          /* Makes image cover the entire container */
+    background-position: center;     /* Centers the background image */
+    background-repeat: no-repeat;
+}
+.text {
+    margin-top: 50px;
+    width: 600px;
+    height: 350px;
+    line-height: 35px;
+}
+
+.text span {
+    letter-spacing: 10px;
+    text-decoration: underline;
+    opacity: 0.7;
+}
+/* meore */
+
+.meore{
+    position: fixed;
+    top:80px;
+    right: 0px;
+    height: 90%;
+    width: 750px;
+    background: transparent;
+    margin-left: 100px;
+    gap: 100px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column; /* ვერტიკალური განლაგებისთვის */
+    gap: 30px;
+}
+
+.box{
+    border-radius: 20px;
+    height: 60px;
+    width: 700px;
+    background-color: beige;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+.box input{
+    border-radius: 20px;
+    height: 60px;
+    width: 700px;
+    border: none;
+    letter-spacing: 5px;
+    opacity: 0.5;
+    font-family: 'Gabriela';
+}
+.row{
+    display: flex;
+    gap: 30px; /* ელემენტებს შორის დაშორება */
+}
+.box1{
+    border-radius: 20px;
+    height: 60px;
+    width: 350px;
+    background-color: beige;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+.box1 input{
+    font-family: 'DM Serif Text';
+    border-radius: 20px;
+    height: 60px;
+    width: 300px;
+    border: none;
+    letter-spacing: 5px;
+    opacity: 0.5;
+}
+.meore button{
+    font-family: 'DM Serif Text';
+    margin-left: 180px;
+    width: 300px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+div.incorrect label{
+    background-color: red;
+}
+div.incorrect input{
+    border-color: red;
+}

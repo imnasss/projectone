@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .horizontal-wrap {
+    position: absolute;
+    top: 200px;
+    right: 200px;
+    width: 800px;
+    overflow: hidden;
+    border-bottom: 5px solid yellow;
+    border-top: 5px solid yellow;
+    border-left: 5px solid yellow;
+    border-right: 5px solid yellow;
+}
+
+.horizontal {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.horizontal1 {
+    min-width: 100%;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.imagine1 {
+    display: flex;
+    gap: 40px;
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+.imagine1 img {
+    height: 200px;
+    width: 200px;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: #333;
+}
+
+#backBtn, #nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 20px;
+    color: #333;
+    z-index: 10;
+}
+
+#backBtn {
+    left: 0;
+}
+
+#nextBtn {
+    right: 0;
+}
+
+#backBtn:hover, #nextBtn:hover {
+    color: #555;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="horizontal-wrap">
+        <button id="backBtn">‹</button>
+        <div class="horizontal">
+            <div class="horizontal1">
+                <div class="imagine1">
+                    <img src="images/poto2.jpg" alt="Headphones">
+                    <img src="images/poto4.jpg" alt="Headphones">
+                    <img src="images/poto3.jpg" alt="Headphones">
+                </div>
+                
+            </div>
+            <div class="horizontal1">
+                <div class="imagine1">
+                    <img src="images/poto2.jpg" alt="Headphones">
+                    <img src="images/poto4.jpg" alt="Headphones">
+                    <img src="images/poto3.jpg" alt="Headphones">
+                </div>
+                
+            </div>
+            <div class="horizontal1">
+                <div class="imagine1">
+                    <img src="images/poto2.jpg" alt="Headphones">
+                    <img src="images/poto4.jpg" alt="Headphones">
+                    <img src="images/poto3.jpg" alt="Headphones">
+                </div>
+                
+            </div>
+        </div>
+        <button id="nextBtn">›</button>
+        <div class="navigation"></div>
+</div>
+
+
+<script>
+
+
+const slider = document.querySelector('.horizontal');
+const slides = document.querySelectorAll('.horizontal1');
+const nextBtn = document.getElementById('nextBtn');
+const backBtn = document.getElementById('backBtn');
+const navigation = document.querySelector('.navigation');
+
+let currentSlide = 0;
+
+slides.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (index === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => {
+        currentSlide = index;
+        updateSlider();
+    });
+    navigation.appendChild(dot);
+});
+
+function updateSlider() {
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+    document.querySelectorAll('.dot').forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+    });
+
+    backBtn.style.opacity = currentSlide === 0 ? '0.5' : '1';
+    nextBtn.style.opacity = currentSlide === slides.length - 1 ? '0.5' : '1';
+}
+
+nextBtn.addEventListener('click', () => {
+    if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        updateSlider();
+    }
+});
+
+backBtn.addEventListener('click', () => {
+    if (currentSlide > 0) {
+        currentSlide--;
+        updateSlider();
+    }
+});
+
+updateSlider();
+
+
+
+
+
+
+/* try catch eroorebs ichers
+try{
+    conssdasole.log('hi');
+}catch(error){
+    console.log('there is error ' + error);
+}
+*/
+
+
+
+    /* clasebi
+    class User {
+        constructor(Name, Age){
+            this.name = Name;
+            this.age = Age;
+        }
+        PrintValues(){
+            console.log(this.name, this.age);
+        }
+    }
+
+    var user = new User('luka', 19);
+    user.PrintValues();
+*/
+
+
+
+
+
+
+
+
+
+
+
+    /*<div id="btn"></div>
+var Button = document.getElementById('btn');
+    Button.addEventListener('mouseover', function() {
+        var Box = document.getElementById('box');
+        Box.style.height = '100vh';
+        Box.style.width = '100%';
+        Box.style.backgroundColor = 'grey'; box adzlev css propertiebs
+    })
+        
+    
+    
+    
+    document.addEventListener('scroll', () => { roca ascrolav ganaxebs koordinaitebs consolelogshi
+        var scrollValue = scrollY;
+        console.log(scrollValue);
+        if(scrollValue == 1224){
+            return alert('its position');
+        }
+    })
+        
+    
+    
+    local storage
+    
+     <input type="text" id="np">
+    <button id="btn">save</button>
+    <h1 id="text"></h1>
+    
+    var Input = document.getElementById('np');
+   var Button = document.getElementById('btn');
+   var Text = document.getElementById('text');
+
+    Button.addEventListener('click',()=>{
+        localStorage.setItem('Name', Input.value);
+        window.location = 'sacdeli.html';
+    })
+    Text.innerHTML = localStorage.getItem('Name');
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    */
+
+</script>
+</body>
+</html>

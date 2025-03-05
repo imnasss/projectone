@@ -1,0 +1,363 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 2900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*vertical */
+.vertical {
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.texts {
+    font-family: 'DM Serif Text';
+    font-size: 20px;
+    opacity: 0.8;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    line-height: 50px;
+    height: 100vh;
+    text-align: center;
+}
+.texts h3:hover{
+    text-decoration: underline;
+}
+#h1 {
+    color: white;
+    opacity: 1;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+/* pirveli page*/
+.pirveli {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 80.3%;
+    height: 750px;
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    line-height: 40px;
+}
+.pirveli img{
+    border: 5px solid white;
+    margin-left: 20px;
+    width: 100%;
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+}
+.texts2 {
+    font-family: 'Courier New', Courier, monospace;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    line-height: 50px;
+    height: 100vh;
+    text-align: center;
+}
+
+
+/* aqedan iwyeba meore page*/
+.horizontal-wrap {
+    position: absolute;
+    top: 750px;
+    right: 0px;
+    width: 80.3%;
+    overflow: hidden;
+    border-bottom: 5px solid yellow;
+    border-top: 5px solid yellow;
+    border-left: 5px solid yellow;
+    border-right: 5px solid yellow;
+}
+
+.horizontal {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.horizontal1 {
+    min-width: 100%;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.imagine1 {
+    width: 45%;
+    height: 400px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.imagine1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.texts3 {
+    width: 45%;
+    text-align: center;
+}
+
+.texts3 h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.texts3 h3 {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.texts3 button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.texts3 button:hover {
+    background: #555;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: #333;
+}
+
+#backBtn, #nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 20px;
+    color: #333;
+    z-index: 10;
+}
+
+#backBtn {
+    left: 0;
+}
+
+#nextBtn {
+    right: 0;
+}
+
+#backBtn:hover, #nextBtn:hover {
+    color: #555;
+}
+
+
+.pirveli{
+    width: 77%;
+    height: 750px;
+    background: rgb(173, 142, 142);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.pirveli button{
+    padding: 12px 30px;
+    font-size: 1rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+/* mesame page*/
+.meore {
+    justify-content: space-between; /* ელემენტებს შორის სივრცის განაწილება */
+    align-items: center; /* ვერტიკალურად გასწორება */
+    text-align: center;
+    position: absolute;
+    top: 1280px;
+    right: 0px;
+    background: grey;
+    height: 700px;
+    width: 80.3%;
+    padding: 30px;
+}
+.meore button{
+    font-family: 'DM Serif Text';
+    width: 300px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 650px;
+    right: 450px;
+}
+
+.texts4{
+    padding-top: 0px; /* დამატებითი აწევა */
+}
+.potoebi{
+    height: 450px;
+    width: 1000px;
+    background: transparent;
+    margin-top: 30px;
+    margin-left: 60px;
+    gap: 80px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-family: 'Kumar One';
+}
+.potoebi img{
+    height:350px;
+    width: 290px;
+    border-radius: 15px;
+}
+.box1 {
+    border-radius: 15px;
+    font-family: 'Kumar One';
+    text-align: center;
+    width: 450px;
+    height: 450px;
+    background: white; /* საცდელი ფერი */
+}
+.box2 {
+    border-radius: 15px;
+    width:450px;
+    height: 450px;
+    background: white; /* საცდელი ფერი */
+}
+.box3 {
+    border-radius: 15px;
+    width: 450px;
+    height: 450px;
+    background: white; /* საცდელი ფერი */
+}
+
+/* meotxe page*/
+.mesame {
+    display: flex;
+    justify-content: space-between; /* ელემენტებს შორის სივრცის განაწილება */
+    align-items: center; /* ვერტიკალურად გასწორება */
+    text-align: center;
+    position: absolute;
+    top: 1980px;
+    right: 0px;
+    background: white;
+    height: 700px;
+    width: 80.3%;
+    padding: 30px;
+}
+.mesame .texts5{
+    padding-top: 30px; /* დამატებითი აწევა */
+}
+.manage{
+    height: 450px;
+    width: 1000px;
+    background: transparent;
+    margin-top: 30px;
+    margin-left: 60px;
+    gap: 80px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-family: 'Gabriela';
+}
+.manage img{
+    height:350px;
+    width: 290px;
+    border-radius: 15px;
+}
+.box11 {
+     border-radius: 15px;
+    width: 450px;
+    height: 450px;
+    background: transparent; /* საცდელი ფერი */
+}
+.box22 {
+    width:450px;
+    height: 450px;
+    background:transparent; /* საცდელი ფერი */
+}
+.box33 {
+    width: 450px;
+    height: 450px;
+    background: transparent; /* საცდელი ფერი */
+}
+
+/* bolo @*/
+h2 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2850px;
+    right: 400px;
+    
+}
+

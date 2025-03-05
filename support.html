@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPPORT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumar+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="support.css">
+</head>
+<body>
+    <div class="container">
+        <div class="vertical">
+            <div class="texts">
+                <span id="h1"><h1>IMNAA</h1></span>
+                <h3><a href="homepage.html">HOME</a></h3>
+                <h3 ><a href="product.html">PRODUCT</a></h3>
+                <h3><a href="about.html">ABOUT US</a></h3>
+                <h3 style="text-decoration: underline;">SUPPORTT</h3>
+                <h3><a href="blog.html">BLOG</a></h3>
+            </div>
+        </div>
+ 
+    <div class="pirveli"><!--pirveli gverdi-->
+        <div class="texts1">
+            <h1>Welcome to imnaaa</h1><br>
+            <h3>Elevating Your Audio Experience</h3><br>
+        </div>
+    </div>  
+    <div class="meore"><!--meore gverdi-->
+        <div class="faq-container">
+            <h1 class="faq-title">frequently asked questions</h1>
+            <p class="faq-subtitle">find answers...</p>
+    
+            <div class="faq-item">
+                <div class="faq-question">What is the warranty period for imnaaa headphones?</div>
+                <div class="faq-answer">All imnaaa headphones come with a standard one-year warranty, covering manufacturing defects and performance issues. If you encounter any problems within this period, please contact our support team for assistance. We strive to ensure your satisfaction and will work to resolve any issues promptly.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How do I connect my headphones to my device?</div>
+                <div class="faq-answer">To connect your imnaaa headphones, simply power them on and enable Bluetooth on your device. Search for available devices and select 'imnaaa Headphones' from the list. Once connected, you will hear a confirmation sound. For wired connections, plug the headphone jack into the audio port of your device.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can I use my headphones while charging?</div>
+                <div class="faq-answer">Yes, you can use your imnaaa headphones while they are charging. However, for optimal performance and battery longevity, we recommend allowing them to charge fully before use. This ensures you experience the best sound quality and functionality without interruptions.</div>
+            </div>
+        </div> 
+    </div>
+
+    <div class="mesame"><!--mesame gverdi-->
+        <h1>Our Journey</h1><br>
+            <h3>Crafting Soundscapes for Everyone</h3><br><br>
+            <div class="yuti">
+                <div class="erti">
+                    <h4>Battery Maintence Tips</h4>
+                    <h5>February,18,2025</h5>
+                </div>
+                <div class="ori">
+                    <h4>Storage and Protection</h4>
+                    <h5>February,18,2025</h5>
+                </div>
+                <div class="sami">
+                    <h4>Cleaning Your Headphones</h4>
+                    <h5>February,18,2025</h5>
+                </div>
+            </div>
+    </div>
+<!--meotxe gverdi-->
+    <div class="meotxe">
+        <h1>Get in Touch</h1>
+        <h4>We value your feedback and are here to help</h4>
+        <form id = "myform" method = POST action = "" enctype = "text/plain" style = "background:'e0e0e0'">
+        <br>
+        <br>
+        <input name = "email_to" type = "text" placeholder = "Name">
+        <br>
+        <br>
+        <input name = "email_from" type = "text" placeholder = "Email">
+        <br>
+        <br>
+        <textarea name = "message" type = "text" placeholder = "message"></textarea>
+        <p>
+        <button>Submit</button>
+        </form>
+    </div> 
+    
+</div> <!--containeris damxuravi-->
+
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            question.classList.toggle('active');
+            const answer = question.nextElementSibling;
+            answer.classList.toggle('active');
+            document.querySelectorAll('.faq-question').forEach(otherQuestion => {
+                if(otherQuestion !== question){
+                    otherQuestion.classList.remove('active');
+                    otherQuestion.nextElementSibling.classList.remove('active');
+                }
+            })
+        })
+    })
+</script>
+</body>
+</html>
